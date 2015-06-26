@@ -12,3 +12,6 @@ class Event(models.Model):
 	event_seats = models.IntegerField(default = 36)
 	event_organiser_details = models.CharField(max_length = 300)
 
+	def __str__(self):
+		return self.event_name + " | " + self.event_venue + " | " + str(self.event_date)
+
